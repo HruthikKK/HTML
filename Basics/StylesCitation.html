@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkgrey;
+        }
+        #abc{
+            background-color:cornflowerblue;
+        }
+        blockquote{
+            background-color: aliceblue;
+        }
+        q{
+            color:blue;
+        }
+        footer{
+            background-color: grey;
+            color: white;
+            text-align: right;
+        }
+        cite{
+            color: blueviolet;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- here no preference for linking css file and style declaration all styling method overwrite the prev ones -->
+</head>
+<body style="background-color: aliceblue;">
+    <p
+    style="background-color: rgba(80, 80, 149,0.1);">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum obcaecati minus maxime odit corporis fugiat asperiores, dolore recusandae ratione laborum.</p>
+    <!-- a in rgba is set the opacity -->
+    <p id = bcd>
+    <!-- bcd is in style.css file, as it is linked in head part we can use in anywhere -->
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum obcaecati minus maxime odit corporis fugiat asperiores, dolore recusandae ratione laborum.
+    <cite>/LoremGenerator</cite></p>
+
+    <p id = abc>
+    <!-- abc is decl in style inside head tag -->
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum obcaecati minus maxime odit corporis fugiat asperiores, dolore recusandae ratione laborum.</p>
+    <p style="background-color: white;">
+
+        <q cite="https://www.google.com/">Hardwork beats Talent</q>
+        <!-- q adds "" to the text , cite makes no diff in apperance -->
+        <blockquote cite="https://www.google.com">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur officiis consectetur delectus dicta voluptate mollitia iure quaerat porro excepturi facilis?
+            <footer>-ABC,<cite><a href="http://google.com">google.com</a></cite></footer>
+            <!-- footer and cite tag -->
+        </blockquote>
+        <!-- blockquote center alings the text , cite makes no diff in apperance -->
+        <!-- q  and blockquote tag takes global attributes but cite is main attribute for both q and blockquote -->
+        <!-- their style can me decl under headers style block -->
+    </p>
+    
+
+</body>
+</html>

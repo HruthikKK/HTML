@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <picture>
+        <!-- browsers chooses any one source suitable for user display device -->
+        <!-- responsive display of imgs to reduce use of bandwidth  -->
+        <!-- just like switch case ,where img child is default case -->
+        <source media="(min-width: 1500px)" srcset="1500.jpg">
+        <source media="(min-width: 1080px)" srcset="1080.jpg">
+        <img src="720.jpg" alt="third img">
+    </picture>
+
+    <!-- img mapping -->
+    <img src="D3.jpg" usemap="#image-map">
+    <!-- if at all we need img of smaller size with mapping function, we shd first reduce the img size and then apply mapping again we shd not use width attributr in img if we use it then mapping funct will not work as coordintes were defined for initial img -->
+
+    <map name="image-map">
+        <area onclick="f1()" alt="" title="" href="" coords="815,513,1105,806" shape="rect">
+        <area onclick="f2()" alt="" title="" href="" coords="820,911,1089,1149" shape="rect">
+    </map>
+
+    <script>
+        function f1(){ 
+            alert("Real")
+        }
+        function f2(){
+            alert("Reflection")
+        }
+    </script>
+</body>
+</html>

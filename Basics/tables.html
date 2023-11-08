@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* for custom styling of tables use class 
+        .classname __(i.e table, th,td, tr elements) */
+        body{
+            background-color: grey;
+        }
+         table{
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+            color: white;
+            background-color: black;
+            border: 2px solid white;
+            /* the border prop. is overwritten in td and th block, so 2px border is limited to outerlines */
+        }
+        td,th{
+            border: 1px solid white;
+            padding: 10px;
+        }
+        .beta td,th{
+            border: 1px solid white;
+            padding: 20px;
+        }
+        .beta tr:nth-child(even){
+            background: blue;
+        }
+        caption{
+            background-color: #414141;
+            caption-side: bottom;
+        }
+        br{
+            line-height: 5px;
+        }
+        .header{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <table class="beta">
+        <!-- caption for table -->
+        <caption>This is bottom side caption</caption>
+        <thead>
+            <tr>
+              <th colspan="3">Student detail(help of colspan)</th>
+            </tr>
+        </thead>
+        <!-- thead , tfoot is optional and both can be styled-->
+        <!-- colspan is an attribute for table elements(th, td) to get an cell equivalent to mentioned no. ,here 3 -->
+        <tr>
+            <th>Roll No.</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>A</td>
+            <td>aaaaa@gmail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>B</td>
+            <td>bbbbb@gmail.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>C</td>
+            <td>ccccc@gmail.com</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>D</td>
+            <td>ddddd@gmail.com</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <th colspan="3"> End of List</th>
+            </tr>
+        </tfoot>
+
+    </table>
+    <br />
+    <!-- colgroup -->
+    <table>
+        <!-- <colgroup span="2" style="background: lightblue;"></colgroup>
+        <colgroup span="2" style="background: lightgray;"></colgroup> OR-->
+        <colgroup>
+            <col span="2" style="background-color: lightblue;" />
+            <col span="1" style="background-color: lightgray;" />
+            <col style="background-color: lightgray;">
+            <!-- if span is not mentioned default value is 1 -->
+        </colgroup>
+        <tr class="header">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

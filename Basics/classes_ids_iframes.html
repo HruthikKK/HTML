@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1{
+            background-color: grey;
+        }
+        #id1{
+            background-color: cyan;
+        }
+        figcaption{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Classes nd Ids -->
+    <!-- classes can be used to target many elements in a webpage but id shd be targeting unique element  -->
+    <p class="c1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quia modi dolorem accusamus nobis fugiat earum, illo laborum voluptatibus nulla?</p>
+    <p id="id1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quia modi dolorem accusamus nobis fugiat earum, illo laborum voluptatibus nulla?</p>
+    <p class="c1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quia modi dolorem accusamus nobis fugiat earum, illo laborum voluptatibus nulla?</p>
+    <p id="id1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quia modi dolorem accusamus nobis fugiat earum, illo laborum voluptatibus nulla?</p>
+    <!-- here id1 is used for two elements but html donot give any error but id is used to target unique element -->
+
+    <!-- iframes can be displayed by itself but we target the iframe through anchor and other tags-->
+    <!-- src is the embedded url of the website tht we shd display initially through iframe if we use targettiing then first iframe is set to src url and then <a> tag is targeted to iframe the url of <a> is displayed in iframe even <a> tag's url shd be embedded (example is depicted in second iframe) -->
+    <!-- while targetting we use 'target' attribute in anchor tag and name attribute in iframe tag   -->
+    <!-- title attribute in iframe is used in voice read of webpage -->
+    <figure>
+        <iframe 
+        width="560" height="315" 
+        src="iframeIndex.html" 
+        title="YouTube video player" 
+        name="f1"
+        allowfullscreen>
+        </iframe>
+        <figcaption> <a href="https://www.youtube.com/embed/I7LrS1z_WNA?si=QWeGI490UDoqSm9R" target="f1">Lecture1</a> </figcaption>
+    </figure>
+
+    <figure>
+        <iframe src="https://www.youtube.com/embed/I7LrS1z_WNA?si=QWeGI490UDoqSm9R"
+        title="Lecture1"
+        width="50%" frameborder="0" name="f2"
+        height = 315 width="560">
+        <!-- frameborder = 0 to collapse the automatic border of iframe -->
+        </iframe>
+        <figcaption> <a href="https://www.google.com/webhp?igu=1" target="f2">google</a> </figcaption>
+    </figure>
+
+</body>
+</html>

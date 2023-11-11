@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            background-color: #8e8686;
+            color: #fff;
+            
+        }
+        ::placeholder{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML forms</h1>
+
+
+    <form action="target url where form shd be submitted" method="post" autocomplete="on" enctype="multipart/form-data" >
+
+        <!-- significance of value in input element: https://www.w3schools.com/tags/att_input_value.asp#:~:text=The%20value%20attribute%20specifies%20the,value%20of%20the%20input%20field -->
+        <label for="fname">First Name</label>
+        <input type="text" name="" id="fname"  value="First Name" spellcheck="false"/>
+        <br>
+        <br>
+        <label for="lname">Last Name</label>
+        <input type="text" name="" id="lname" placeHolder="Last Name" spellcheck="false"/>
+        <br>
+        <br>
+        <label for="pw">Password</label>
+        <input type="password" name="" id="pw" minlength="8">
+        <br><br>
+        <label for="file">MarksCard</label>
+        <input type="file" name="" id="file">
+        <br><br>
+        <label for="userEmail" >User Email :</label>
+        <input type="email" name="" id="userEmail" required>
+        <br><br>
+        <input type="submit" value="SUBMIT">
+    </form>
+    <br><br>
+
+    <p><b>CheckBox</b></p>
+    <form action="" method="get">
+        <label for="C1">Would you like to receive email from ourside:</label>
+        <input type="checkbox" name="C1" id="C1">
+    </form>
+    <br><br>
+    
+    <p><b>Select and option tag</b></p>
+    <label for="Gender">Choose Gender</label>
+    <select name="Gender" id="Gender" size="1">
+        <option value="Female">Female</option>
+        <option value="Male" selected>Male</option>
+    </select>
+    <!-- the first option is displayed initially to display custom option initally use selected attribute in that option -->
+
+    <form action="akamlk.com">
+        <p><b>DataLists</b></p>
+        <input list="gender">
+            <datalist id="gender">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </datalist>
+        </input>
+    </form>
+
+    <br><br>
+        <label for="Ay"><b>About Yourself</b></label>
+        <br>
+        <textarea name="Ay" id="Ay" cols="50" rows="10" ></textarea>
+
+    <!-- fieldset and legend used to Divide form into sections : https://www.w3schools.com/tags/tag_fieldset.asp  -->
+
+    <form action="" method="post" autocomplete="">
+        <fieldset>
+            <legend>Personal Info
+            </legend>
+            <label for="fname">First Name</label>
+            <input type="text" name="" id="fname"  value="First Name"/>
+            <br>
+            <br>
+            <label for="lname">Last Name</label>
+            <input type="text" name="" id="lname" placeHolder="Last Name"/>
+            <br>
+            <br>
+            <label for="dob">DOB:</label>
+            <input type="date" name="dob" id="dob">
+            <br><br>
+            <label for="age">AGE:</label>
+            <input type="number" name="age" id="age" min="1" max="1000">
+            <br><br>
+            <label for="wt">Weight</label>
+            <input type="range" name="wt" id="wt" min="0" max="100" step="10">
+            <br><br>
+            <label for="email">Email</label>
+            <input type="email" required/>
+            <br><br>
+            <input type="submit">
+        </fieldset>
+
+        <fieldset>
+            <legend>ADMISSION</legend>
+            <h3>Course:</h3>
+            <input type="radio" name="course" id="cse" value="cse" checked>
+            <label for="cse">CSE</label>
+            <input type="radio" name="course" id="ise" value="ise" >
+            <label for="ise">ISE</label>
+            <input type="radio" name="course" id="ece" value="ece" >
+            <label for="ece">ECE</label>
+            <h3>Through:</h3>
+            <input type="radio" name="through" id="kcet" value="kcet" >
+            <label for="kcet">KCET</label>
+            <input type="radio" name="through" id="comedk" value="comedk" >
+            <label for="comedk">COMEDK</label>
+            <input type="radio" name="through" id="mgm" value="mgm" >
+            <label for="mgm">MANAGEMENT</label>
+            <!-- if we want to chose any choice in radio use checked in the input tag of tht choice -->
+        </fieldset>
+    </form>
+</body>
+</html>
